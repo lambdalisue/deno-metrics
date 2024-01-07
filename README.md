@@ -4,12 +4,24 @@
 [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/prometheus/mod.ts)
 [![Test](https://github.com/lambdalisue/deno-openmetrics/workflows/Test/badge.svg)](https://github.com/lambdalisue/deno-openmetrics/actions?query=workflow%3ATest)
 
-Metrics library for [Deno]. It (will) support exporting metrics to [Prometheus]
+OpenMetrics library for [Deno]. It supports exporting metrics to [Prometheus]
 and [OpenMetrics].
 
 [Deno]: https://deno.land/
 [Prometheus]: https://prometheus.io/
 [OpenMetrics]: https://openmetrics.io/
+
+## ToDo
+
+- [ ] Support Metric Types
+  - [ ] `StateSet`
+  - [ ] `Info`
+  - [ ] `Histogram`
+  - [ ] `GaugeHistogram`
+  - [ ] `Summary`
+  - [ ] `Unknown`
+- [ ] Add a `Collector` that use `Deno.metrics()` to collect metrics
+- [ ] Consider if we can use `Worker` to collect/handle metrics in background
 
 ## License
 
