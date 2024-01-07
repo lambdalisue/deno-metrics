@@ -1,7 +1,8 @@
 {
   "lock": false,
   "tasks": {
-    "test": "deno test -A --parallel --shuffle --doc --coverage=.coverage",
+    "test": "deno test -A --parallel --shuffle --doc",
+    "test:coverage": "deno task test --coverage=.coverage",
     "check": "deno check ./**/*.ts",
     "coverage": "deno coverage .coverage",
     "upgrade": "deno run -q -A https://deno.land/x/molt@0.14.2/cli.ts ./**/*.ts",
