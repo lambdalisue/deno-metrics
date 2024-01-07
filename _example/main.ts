@@ -22,7 +22,7 @@ function main(): void {
   const m = buildMetrics(registry);
   m.cpuTemp.set(65.3);
   m.hdFailures.with({ device: "/dev/sda" }).inc();
-  const exporter = new metrics.PrometheusExporter(registry);
+  const exporter = new metrics.OpenMetricsExporter(registry);
   exporter.serve({
     hostname: "127.0.0.1",
     port: 9000,
